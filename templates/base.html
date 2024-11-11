@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=\, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static 'styles/navigation.css' %}"/>
+    <title>ClimbingGeeks</title>
+</head>
+<body>
+<div id="wrapper">
+    <!-- Logo image: a link to index/home page -->
+    <a id="logo" href="#">
+        <img id="logo-img" src="{% static 'images/logo.png' %}" class="logo" alt="logo"/>
+    </a>
+
+    <header>
+        <!-- Navigation -->
+        <nav>
+            {% if render.user %}
+                <div class="user">
+                    <a href="#">Home Page</a>
+                    <a href="#">Clubs</a>
+                    <a href="#">Upcoming Competitions</a>
+                    <a href="#">{{ user }}</a>
+                </div>
+            {% else %}
+                <!-- If user's profile has NOT been created -->
+                <div class="guest">
+                    <a href="#">Create User's Profile</a>
+                    <a href="#">Login into Profile</a>
+                </div>
+            {% endif %}
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+</div>
+<!-- footer -->
+<footer>
+    <p>&copy; 2024 ClimbingGeeks by Kristiyan. All rights reserved.</p>
+</footer>
+</body>
+</html>
