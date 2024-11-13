@@ -4,43 +4,50 @@
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=\, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="{% static 'styles/navigation.css' %}"/>
+    {% block extra_css %}
+
+    {% endblock %}
     <title>ClimbingGeeks</title>
 </head>
 <body>
 <div id="wrapper">
-    <!-- Logo image: a link to index/home page -->
-    <a id="logo" href="#">
+    <!-- Navbar -->
+    <a id="logo" href="{% url 'home' %}">
         <img id="logo-img" src="{% static 'images/logo.png' %}" class="logo" alt="logo"/>
     </a>
-
     <header>
-        <!-- Navigation -->
         <nav>
-            {% if render.user %}
+            {% if request.user.is_authenticated %}
                 <div class="user">
-                    <a href="#">Home Page</a>
+                    <a href={% url 'user-home' %}>Home</a>
+                    <a href="{% url 'description' %}">Description</a>
+                    <a href="{% url 'about' %}">About me</a>
                     <a href="#">Clubs</a>
                     <a href="#">Upcoming Competitions</a>
-                    <a href="#">{{ user }}</a>
+                    <a href="{% url 'logout' %}">{{ request.user }}</a>
                 </div>
             {% else %}
-                <!-- If user's profile has NOT been created -->
                 <div class="guest">
-                    <a href="#">Create User's Profile</a>
-                    <a href="#">Login into Profile</a>
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'description' %}">Description</a>
+                    <a href="{% url 'about' %}">About me</a>
+                    <a href="{% url 'register' %}">Create User's Profile</a>
+                    <a href="{% url 'login' %}">Login into Profile</a>
                 </div>
             {% endif %}
         </nav>
     </header>
 
     {% block content %}
+
     {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ClimbingGeeks by Kristiyan. All rights reserved.</p>
+    </footer>
 </div>
-<!-- footer -->
-<footer>
-    <p>&copy; 2024 ClimbingGeeks by Kristiyan. All rights reserved.</p>
-</footer>
 </body>
 </html>

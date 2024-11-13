@@ -10,7 +10,7 @@ body {
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #f0f8ff, #87ceeb);
+    background: linear-gradient(120deg, #f0f8ff, #87ceeb)!important;
 }
 
 #wrapper {
@@ -54,7 +54,7 @@ nav a:hover {
 
 #logo {
     position: absolute;
-    top: 40px;
+    top: 10px;
     left: 10px;
     width: 80px;
     height: 80px;

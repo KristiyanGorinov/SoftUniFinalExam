@@ -10,13 +10,13 @@
 </head>
 <header>
     <nav>
-            <div class="guest">
-                <a href={% url 'home' %}>Home</a>
-                <a href={% url 'description' %}>Description</a>
-                <a href={% url 'about' %}>About me</a>
-                <a href={% url 'register' %}>Create User's Profile</a>
-                <a href={% url 'login' %}>Login into Profile</a>
-            </div>
+        <div class="guest">
+            <a href={% url 'home' %}>Home</a>
+            <a href={% url 'description' %}>Description</a>
+            <a href={% url 'about' %}>About me</a>
+            <a href={% url 'register' %}>Create User's Profile</a>
+            <a href={% url 'login' %}>Login into Profile</a>
+        </div>
     </nav>
 </header>
 <body>
@@ -30,27 +30,30 @@
 
     <!-- Buttons -->
     <div class="button-container">
-        <button class="button">Login</button>
-        <button class="button">Register</button>
+        <a href={% url 'login' %}>
+            <button class="button">Login</button>
+        </a>
+        <a href={% url 'register' %}>
+            <button class="button">Register</button>
+        </a>
     </div>
 </div>
 
 <div class="gallery">
-  <div class="gallery-column left">
-    <img src="{% static 'images/image1.jpg' %}" alt="Gallery Image 1">
-    <img src="{% static 'images/image2.jpg' %}" alt="Gallery Image 2">
-    <img src="{% static 'images/image3.jpg' %}" alt="Gallery Image 3">
-    <img src="{% static 'images/image4.jpg' %}" alt="Gallery Image 4">
-  </div>
-    
-  <div class="gallery-column right">
-    <img src="{% static 'images/image5.jpg' %}" alt="Gallery Image 5">
-    <img src="{% static 'images/image6.jpg' %}" alt="Gallery Image 6">
-    <img src="{% static 'images/image7.jpg' %}" alt="Gallery Image 7">
-    <img src="{% static 'images/image8.jpg' %}" alt="Gallery Image 8">
-  </div>
-</div>
+    <div class="gallery-column left">
+        <img src="{% static 'images/image1.jpg' %}" alt="Gallery Image 1">
+        <img src="{% static 'images/image2.jpg' %}" alt="Gallery Image 2">
+        <img src="{% static 'images/image3.jpg' %}" alt="Gallery Image 3">
+        <img src="{% static 'images/image4.jpg' %}" alt="Gallery Image 4">
+    </div>
 
+    <div class="gallery-column right">
+        <img src="{% static 'images/image5.jpg' %}" alt="Gallery Image 5">
+        <img src="{% static 'images/image6.jpg' %}" alt="Gallery Image 6">
+        <img src="{% static 'images/image7.jpg' %}" alt="Gallery Image 7">
+        <img src="{% static 'images/image8.jpg' %}" alt="Gallery Image 8">
+    </div>
+</div>
 
 
 <!-- footer -->

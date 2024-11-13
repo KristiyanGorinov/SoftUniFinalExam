@@ -1,17 +1,38 @@
-
 body,
 html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #7abecc !important;
+    background: linear-gradient(120deg, #f0f8ff, #87ceeb);
 }
 
-.user_card {
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+#logo img {
+    width: 150%;
+    height: auto;
+}
+
+
+.container {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.user_card{
     width: 350px;
     margin-top: auto;
     margin-bottom: auto;
-    background: #74cfbf;
+    background-color: #2fb496;
     position: relative;
     display: flex;
     justify-content: center;
@@ -62,8 +83,22 @@ html {
 }
 
 #messages {
-    background-color: grey;
+    background-color: red;
     color: #fff;
     padding: 10px;
     margin-top: 10px;
+    border-radius: 0.25rem 0 0 0.25rem !important
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1em 1em 0em;
+    background-color: #206c5c;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 0.9em;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
 }

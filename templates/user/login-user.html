@@ -9,11 +9,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
           integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'styles/styles.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}"/>
 
 
 </head>
 <body>
+<a id="logo" href="{% url 'home' %}">
+    <img id="logo-img" src="{% static 'images/logo.png' %}" class="logo" alt="logo"/>
+</a>
 <div class="container h-100">
     <div class="d-flex justify-content-center h-100">
         <div class="user_card">
@@ -58,5 +61,9 @@
         </div>
     </div>
 </div>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 ClimbingGeeks by Kristiyan. All rights reserved.</p>
+</footer>
 </body>
 </html>
