@@ -1,0 +1,1 @@
+A climbing website in which you can join clubs, view upcoming competitions comment with other users and other fun functions for you to explore.
